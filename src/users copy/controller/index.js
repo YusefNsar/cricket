@@ -32,7 +32,7 @@ module.exports.signUp = async (res, parameters) => {
         { expiresIn: config.TOKEN_EXPIRES_IN }
       );
 
-      return res.status(201).json({ token, user: savedUser });
+      return res.status(201).json({ token });
     } catch (error) {
       return res.status(400).json({
         status: 400,

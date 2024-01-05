@@ -12,13 +12,11 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "parserOptions": {
-    "ecmaVersion": 11
-  },
   "plugins": [
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-underscore-dangle": "off"
   }
 }

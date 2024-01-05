@@ -7,11 +7,17 @@ const schemas = require('./utils/schemasValidation');
 const router = express.Router();
 
 router.post(
-  '/api/v1/signup',
+  '/signup',
   validateSchemas.inputs(schemas.signUp, 'body'),
   (req, res) => {
     controller.signUp(res, req.body);
   }
 );
+router.post('/login', (req, res) => {
+  controller.login(res, req.body);
+});
+router.post('/token', (req, res) => {
+  controller.tokenLogin(res, req.body);
+});
 
 module.exports = router;
